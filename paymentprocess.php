@@ -1,3 +1,5 @@
+
+
 <div class="notification">
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/header.php');
@@ -17,7 +19,6 @@ $ship_address = $_POST["ship_address"] ;
 $orderlist = $_POST["orderlist"] ;
    }
 if(!$nameErr){
-  
 $customeremail = $_SESSION['user_email'];
   $customersql = "SELECT customer_id FROM `customer` WHERE email='$customeremail' ";
   $result = $conn->query($customersql);
@@ -28,7 +29,7 @@ $customeremail = $_SESSION['user_email'];
     }
   }
   
-  $sql ="INSERT INTO `order` (`id`, `orderlist`, `customer_id`, `payment_method`, `shipment_address`, `shipment_done`, `date`) VALUES (NULL, '$orderlist', '$customerid', 'paypal', 'noakhali', '0', '2015-05-07 00:00:00');";
+  $sql ="INSERT INTO `order` (`id`, `orderlist`, `customer_id`, `payment_method`, `shipment_address`, `shipment_done`, `date`) VALUES (NULL, '$orderlist', '$customerid', 'paypal', 'comilla', '0', '2015-05-07 00:00:00');;";
     if($conn->query($sql) == TRUE)
     {
     echo "We have received your order. You will be notified Soon.";
