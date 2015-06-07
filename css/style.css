@@ -1194,3 +1194,27 @@ p a {
     padding: 0;
     width: auto;
 }
+.productinfo{
+  float: left;
+  width: 300px;
+  margin-right: 5px;
+  border: 1px solid grey;
+  text-align: center;
+  height: 222px;
+  margin-bottom: 9px;
+  padding-top: 4px;
+}
+.cart-itm-product{
+  float:left;
+  width: 300px;
+  margin-right: 5px;
+  border: 1px solid grey;
+  text-align: center;
+  height: 130px;
+  margin-bottom: 4px;
+}
+.cart-itm{
+  border: 1px solid grey;
+  padding: 4px;
+  margin-bottom: 5px;
+}

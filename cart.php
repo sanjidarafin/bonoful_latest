@@ -1,13 +1,7 @@
 <?php require_once('header.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/admin/connection.php'); ?>
 	<section id="cart_items">
-		<div class="container">
-			<div class="breadcrumbs">
-				<ol class="breadcrumb">
-				  <li><a href="cart.php#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
-				</ol>
-			</div>
+    <h2>You have added this item on cart</h2>
 			<div class="table-responsive cart_info">
 <?php	 $current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 	if(isset($_SESSION["products"]))
@@ -48,7 +42,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/connection.php'); ?>
     echo '<input type="hidden" name="orderlist" value="'.$orderlist.'" />';
 		echo '<span class="check-out-txt">';
 		echo '<strong>Total : '.$currency.$total.'</strong><br>  ';
-		echo 'Shipment Address: <input type="textarea" name="ship_address"/><br>'; ?>
+		echo 'Shipment Address: <textarea maxlength="" value=" " size="" name="ship_address" cols="50" rows="4"> </textarea><br>'; ?>
     
     <?php  if(isset($_SESSION['user_email'])) {
        echo '<input class="btn btn-default check_out" type="submit"></span>';

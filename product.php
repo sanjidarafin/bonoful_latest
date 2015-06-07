@@ -15,7 +15,7 @@ $total = 0;
 echo '<ol>';
 foreach ($_SESSION["products"] as $cart_itm)
 {
-echo '<li class="cart-itm">';
+echo '<li class="cart-itm-product">';
 echo '<span class="remove-itm"><a href="cart_update.php?removep='.$cart_itm["code"].'&return_url='.$current_url.'">&times;</a></span>';
 echo '<h3>'.$cart_itm["name"].'</h3>';
 echo '<div class="p-code">P code : '.$cart_itm["code"].'</div>';
@@ -34,7 +34,10 @@ echo 'Your Cart is empty';
 ?>
 </div>
 <!--/category-products-->
-  
+</br>
+<div style="clear:both"> </div>
+<h2>Our Products</h2> 
+
  <?php
 $results = $conn->query("SELECT * FROM products where category_id='$catid' ORDER BY id ASC");
 if ($results) {
@@ -47,7 +50,7 @@ while($obj = $results->fetch_object())
 <div class="product-image-wrapper">
 <div class="single-products">
 <div class="productinfo text-center">
-<img src="images/home/<?php echo $obj->product_img_name ?>" alt="" />
+<img src="productimage/<?php echo $obj->product_img_name ?>" alt="" />
 <h2><?php echo $obj->product_name ?></h2>
 <p><?php echo $obj->price ?></p>
   <p><?php echo 'Qty <input type="text" name="product_qty" value="1" size="3" />'; ?>
