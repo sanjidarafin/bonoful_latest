@@ -1,6 +1,7 @@
 <html>
 <head>
 <title> Banoful And Co</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 						
 						
             <?php
-        session_start(); 
+       session_start(); 
        if(isset($_SESSION['user_email'])) {
        echo 'You are logged in';
        ?>
@@ -51,7 +52,7 @@
 				<li><a href="/about.php">About us</a></li>
 				<li><a href="/businessType.php">Business Type</a></li>
 				<li><a href="/services.php">Services</a></li>
-				<li><a href="#">Blog</a></li>
+				<li><a href="/checkcart.php">Cart</a></li>
 				<li><a href="/contact.php">Contact Us</a></li>
 			</ul>
 			<div id="section">
@@ -71,4 +72,4 @@
 			</div>
 		</div>
 	</div>
-
+<div style="margin: 0 auto; width:74%">

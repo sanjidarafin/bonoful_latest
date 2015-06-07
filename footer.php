@@ -1,12 +1,5 @@
-<html>
-<head>
-
-<title> Banoful And Co</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-
-<body>
-
+</div>
+<div style="clear:both"></div>
 <div id="footer">
 		
 		

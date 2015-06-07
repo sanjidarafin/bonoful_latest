@@ -48,9 +48,21 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/admin/connection.php'); ?>
     echo '<input type="hidden" name="orderlist" value="'.$orderlist.'" />';
 		echo '<span class="check-out-txt">';
 		echo '<strong>Total : '.$currency.$total.'</strong><br>  ';
-		echo 'Shipment Address: <input type="textarea" name="ship_address"/><br>';
-    echo '<input class="btn btn-default check_out" type="submit"></span>';
-		echo '</form>';
+		echo 'Shipment Address: <input type="textarea" name="ship_address"/><br>'; ?>
+    
+    <?php  if(isset($_SESSION['user_email'])) {
+       echo '<input class="btn btn-default check_out" type="submit"></span>';
+       }
+    else
+      {
+      
+       echo '<br><div style="color:red">You have not logged in. Please login to submit the order</div>';
+       
+    }
+     ?>   
+    
+	<?php
+    echo '</form>';
 		
     }else{
 		echo 'Your Cart is empty';

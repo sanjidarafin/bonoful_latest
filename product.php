@@ -1,21 +1,8 @@
-<?php
-session_start();
-include_once("admin/connection.php");
-$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+<?php require_once('header.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/admin/connection.php'); 
+
 $catid = $_GET['catid'];
 ?>
-
-<!DOCTYPE html>
-<!--header part of banoful-->
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>Banoful And Co.</title>
-	<link rel="stylesheet" type="text/css" href="cart/style.css" />
-	
-</head>
-<body>
-	<?php require_once('header.php') ?>
  
 <div class="shopping-cart">
 <h2>Your Shopping Cart</h2>
@@ -46,7 +33,7 @@ echo 'Your Cart is empty';
 }
 ?>
 </div>
-</div><!--/category-products-->
+<!--/category-products-->
   
  <?php
 $results = $conn->query("SELECT * FROM products where category_id='$catid' ORDER BY id ASC");
@@ -93,5 +80,3 @@ echo '<input type="hidden" name="return_url" value="'.$current_url.'" />';
 </div><!--features_items-->
 	
   <?php require_once('footer.php') ?>
-</body>
-</html>
